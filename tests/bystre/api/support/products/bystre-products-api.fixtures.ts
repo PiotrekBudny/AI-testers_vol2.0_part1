@@ -1,4 +1,4 @@
-import { config } from "../../../../src/config/environment";
+import { config } from "../../../../../src/config/environment";
 import { BystreAdminApiClient } from "../admin/bystre-admin-api.client";
 import { requireBystreStatus } from "../users/bystre-user-lifecycle";
 import { expect, test as usersTest } from "../users/bystre-users-api.fixtures";

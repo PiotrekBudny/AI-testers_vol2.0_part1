@@ -1,13 +1,13 @@
 import { expect, test } from "@playwright/test";
 
-import { config } from "../../src/config/environment";
-import { DocsPage } from "../../src/pages/DocsPage";
-import { HomePage } from "../../src/pages/HomePage";
-import { LoginPage } from "../../src/pages/LoginPage";
-import { ProfilePage } from "../../src/pages/ProfilePage";
-import { RegisterPage } from "../../src/pages/RegisterPage";
-import { SwaggerPage } from "../../src/pages/SwaggerPage";
-import { createTestUser, existingUsers } from "../../src/test-data/users";
+import { config } from "../../../src/config/environment";
+import { DocsPage } from "../../../src/pages/DocsPage";
+import { HomePage } from "../../../src/pages/HomePage";
+import { LoginPage } from "../../../src/pages/LoginPage";
+import { ProfilePage } from "../../../src/pages/ProfilePage";
+import { RegisterPage } from "../../../src/pages/RegisterPage";
+import { SwaggerPage } from "../../../src/pages/SwaggerPage";
+import { createTestUser, existingUsers } from "../../../src/test-data/users";
 
 test(
   "homepage has title 'Rolnopol'",

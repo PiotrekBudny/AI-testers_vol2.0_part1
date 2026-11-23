@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 import type {
   ApiErrorResponse,
   ApiSuccessResponse,
-} from "../../src/api/types/common";
+} from "../../../src/api/types/common";
 import type {
   FinancialAccountResponseData,
   FinancialReportResponseData,
@@ -12,7 +12,7 @@ import type {
   TransactionRecord,
   TransactionsListResponseData,
   TransferResponseData,
-} from "../../src/api/types/financial";
+} from "../../../src/api/types/financial";
 import type {
   FieldRecord,
   MarketplaceBuyResponseData,
@@ -20,8 +20,8 @@ import type {
   MarketplaceOffersListResponseData,
   MarketplaceStatsResponseData,
   MarketplaceTransactionsListResponseData,
-} from "../../src/api/types/marketplace";
-import { ApiUrls } from "../../src/api/urls";
+} from "../../../src/api/types/marketplace";
+import { ApiUrls } from "../../../src/api/urls";
 import {
   containsKey,
   createFieldForUser,

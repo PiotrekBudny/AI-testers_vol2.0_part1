@@ -1,11 +1,11 @@
 import { expect, test } from "@playwright/test";
 
-import type { ApiSuccessResponse } from "../../src/api/types/common";
+import type { ApiSuccessResponse } from "../../../src/api/types/common";
 import type {
   MarketplaceOfferCreateResponseData,
   MarketplaceOffersListResponseData,
-} from "../../src/api/types/marketplace";
-import { ApiUrls } from "../../src/api/urls";
+} from "../../../src/api/types/marketplace";
+import { ApiUrls } from "../../../src/api/urls";
 import {
   createFieldForUser,
   createFundedUser,

@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
-import { StaffFieldsPage } from "../../../src/pages/StaffFieldsPage";
-import { createTestAnimal } from "../../../src/test-data/animals";
+import { StaffFieldsPage } from "../../../../src/pages/StaffFieldsPage";
+import { createTestAnimal } from "../../../../src/test-data/animals";
 
 test(
   "User can add a new field with valid data",

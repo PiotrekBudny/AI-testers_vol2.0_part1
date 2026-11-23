@@ -1,13 +1,13 @@
 # Bystre API Test Plan
 
-| Plan detail             | Value                                                              |
-| ----------------------- | ------------------------------------------------------------------ |
-| Non-admin API           | `https://awesome.byst.re`                                          |
-| Admin API               | `https://aitesters.byst.re` (daily-reset test environment)         |
-| OpenAPI                 | [`/v3/api-docs`](https://awesome.byst.re/v3/api-docs)              |
-| Local contract snapshot | [`docs/bystre-api-docs.tmp.json`](./docs/bystre-api-docs.tmp.json) |
-| Plan status             | 🟡 In progress                                                     |
-| Inventory size          | 53 HTTP operations                                                 |
+| Plan detail             | Value                                                      |
+| ----------------------- | ---------------------------------------------------------- |
+| Non-admin API           | `https://awesome.byst.re`                                  |
+| Admin API               | `https://aitesters.byst.re` (daily-reset test environment) |
+| OpenAPI                 | [`/v3/api-docs`](https://awesome.byst.re/v3/api-docs)      |
+| Local contract snapshot | [`bystre-api-docs.tmp.json`](./bystre-api-docs.tmp.json)   |
+| Plan status             | 🟡 In progress                                             |
+| Inventory size          | 53 HTTP operations                                         |
 
 This is an endpoint-by-endpoint plan for the Playwright API suite in this folder. The workstreams below group operations by behavior and dependency so contributors can select useful work independently. Each row represents one HTTP method and path from the checked-in OpenAPI snapshot. Refresh the inventory when the live API contract changes.
 
@@ -258,7 +258,7 @@ For each selected operation, add or update its dedicated spec, run that file aga
 Example single-file command:
 
 ```powershell
-npx playwright test tests/4_byst.re_api_tests/<spec-file> --project=bystre-api-tests --workers=1 --retries=0
+npx playwright test tests/bystre/api/<spec-file> --project=bystre-api-tests --workers=1 --retries=0
 ```
 
 ## Progress log

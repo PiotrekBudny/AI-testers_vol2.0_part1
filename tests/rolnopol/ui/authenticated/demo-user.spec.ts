@@ -1,9 +1,9 @@
 import { expect, test } from "@playwright/test";
 
-import { config } from "../../../src/config/environment";
-import { LoginPage } from "../../../src/pages/LoginPage";
-import { ProfilePage } from "../../../src/pages/ProfilePage";
-import { existingUsers } from "../../../src/test-data/users";
+import { config } from "../../../../src/config/environment";
+import { LoginPage } from "../../../../src/pages/LoginPage";
+import { ProfilePage } from "../../../../src/pages/ProfilePage";
+import { existingUsers } from "../../../../src/test-data/users";
 
 test(
   "authenticated user can access profile page",

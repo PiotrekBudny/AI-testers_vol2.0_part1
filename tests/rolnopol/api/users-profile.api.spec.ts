@@ -2,9 +2,9 @@ import { randomUUID } from "node:crypto";
 
 import { expect, test } from "@playwright/test";
 
-import type { ApiSuccessResponse } from "../../src/api/types/common";
-import type { UserProfileData } from "../../src/api/types/system";
-import { ApiUrls } from "../../src/api/urls";
+import type { ApiSuccessResponse } from "../../../src/api/types/common";
+import type { UserProfileData } from "../../../src/api/types/system";
+import { ApiUrls } from "../../../src/api/urls";
 import { readApiResponse, registerFreshUser } from "./api-test-helpers";
 
 test.describe("User Profile Management", () => {

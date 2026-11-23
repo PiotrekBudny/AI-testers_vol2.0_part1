@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 import type {
   ApiErrorResponse,
   ApiSuccessResponse,
-} from "../../src/api/types/common";
+} from "../../../src/api/types/common";
 import type {
   Animal,
   AnimalTypesResponse,
@@ -16,12 +16,12 @@ import type {
   FieldsMap,
   MapInfo,
   Staff,
-} from "../../src/api/types/farm";
-import { ApiUrls } from "../../src/api/urls";
+} from "../../../src/api/types/farm";
+import { ApiUrls } from "../../../src/api/urls";
 import {
   createTestAnimal,
   VALID_ANIMAL_TYPES,
-} from "../../src/test-data/animals";
+} from "../../../src/test-data/animals";
 import {
   createAssignment,
   createOwnedAnimal,

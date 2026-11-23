@@ -1,7 +1,7 @@
 import { test as setup } from "@playwright/test";
 
-import { LoginPage } from "../../../src/pages/LoginPage";
-import { existingUsers } from "../../../src/test-data/users";
+import { LoginPage } from "../../../../src/pages/LoginPage";
+import { existingUsers } from "../../../../src/test-data/users";
 
 setup(
   "authenticate DEMO_USER and save session state",

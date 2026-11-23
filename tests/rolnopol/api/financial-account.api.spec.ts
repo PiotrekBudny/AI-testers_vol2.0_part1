@@ -1,12 +1,12 @@
 import { expect, test } from "@playwright/test";
 
-import type { ApiSuccessResponse } from "../../src/api/types/common";
+import type { ApiSuccessResponse } from "../../../src/api/types/common";
 import type {
   FinancialAccountResponseData,
   TransactionCreateResponseData,
   TransferResponseData,
-} from "../../src/api/types/financial";
-import { ApiUrls } from "../../src/api/urls";
+} from "../../../src/api/types/financial";
+import { ApiUrls } from "../../../src/api/urls";
 import {
   createFundedUser,
   readApiResponse,

@@ -1,5 +1,5 @@
 {
-  "name": "ai-testers_vol2.0",
+  "name": "AI-testers_vol2.0_part1",
   "version": "1.0.0",
   "description": "This repository is dedicated to testing and validation work for AI-related projects and experiments.",
   "main": "index.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PiotrekBudny/AI-Testers_vol2.0.git"
+    "url": "git+https://github.com/PiotrekBudny/AI-testers_vol2.0_part1.git"
   },
   "keywords": [],
   "author": "",
@@ -28,9 +28,9 @@
     "node": "^20.19.0 || ^22.13.0 || >=24"
   },
   "bugs": {
-    "url": "https://github.com/PiotrekBudny/AI-Testers_vol2.0/issues"
+    "url": "https://github.com/PiotrekBudny/AI-testers_vol2.0_part1/issues"
   },
-  "homepage": "https://github.com/PiotrekBudny/AI-Testers_vol2.0#readme",
+  "homepage": "https://github.com/PiotrekBudny/AI-testers_vol2.0_part1#readme",
   "lint-staged": {
     "*.ts": [
       "prettier --write",

@@ -52,7 +52,7 @@ and 404).
 
 ## Reusable authenticated-user fixture
 
-User endpoint specs live under `tests/4_byst.re_api_tests/users/`; import `test`
+User endpoint specs live under `tests/bystre/api/users/`; import `test`
 and `expect` from `../support/users/bystre-users-api.fixtures`. Traffic endpoint
 specs and their helpers live in the corresponding `traffic/` folders.
 
@@ -148,13 +148,13 @@ absence of password/token fields.
 Run only this spec from the repository root:
 
 ```powershell
-npx playwright test tests/4_byst.re_api_tests/users/bystre-me.api.spec.ts --project=bystre-api-tests --workers=1 --retries=0
+npx playwright test tests/bystre/api/users/bystre-me.api.spec.ts --project=bystre-api-tests --workers=1 --retries=0
 ```
 
 To check isolation across concurrent fixture instances:
 
 ```powershell
-npx playwright test tests/4_byst.re_api_tests/users/bystre-me.api.spec.ts --project=bystre-api-tests --workers=2 --repeat-each=2 --retries=0
+npx playwright test tests/bystre/api/users/bystre-me.api.spec.ts --project=bystre-api-tests --workers=2 --repeat-each=2 --retries=0
 ```
 
 These commands create real test accounts on the configured API.
@@ -166,8 +166,8 @@ These commands create real test accounts on the configured API.
 Run either endpoint spec from the repository root:
 
 ```powershell
-npx playwright test tests/4_byst.re_api_tests/users/post-users-refresh.api.spec.ts --project=bystre-api-tests --workers=1 --retries=0
-npx playwright test tests/4_byst.re_api_tests/users/post-users-logout.api.spec.ts --project=bystre-api-tests --workers=1 --retries=0
+npx playwright test tests/bystre/api/users/post-users-refresh.api.spec.ts --project=bystre-api-tests --workers=1 --retries=0
+npx playwright test tests/bystre/api/users/post-users-logout.api.spec.ts --project=bystre-api-tests --workers=1 --retries=0
 ```
 
 Both specs use the authenticated-user fixture, which creates and cleans up a unique test account. The logout test verifies refresh-token revocation; the fixture's access token remains available for account cleanup.

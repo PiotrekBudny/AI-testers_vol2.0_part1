@@ -1,6 +1,8 @@
-# AI-Testers Vol2.0
+# AI-testers_vol2.0_part1
 
-Playwright tests for the Rolnopol application.
+Playwright UI and API tests for Rolnopol and API tests for Bystre.
+
+Tests are grouped by application under [tests/](tests/). Bystre's API reference and test plan are in [docs/bystre/](docs/bystre/).
 
 ## Requirements
 

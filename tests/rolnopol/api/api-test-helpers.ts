@@ -6,18 +6,18 @@ import {
   request as playwrightRequest,
 } from "@playwright/test";
 
-import type { RegisterResponseData } from "../../src/api/types/auth";
-import type { ApiSuccessResponse } from "../../src/api/types/common";
+import type { RegisterResponseData } from "../../../src/api/types/auth";
+import type { ApiSuccessResponse } from "../../../src/api/types/common";
 import type {
   Animal,
   Assignment,
   Field,
   Staff,
-} from "../../src/api/types/farm";
-import { ApiUrls } from "../../src/api/urls";
-import { config } from "../../src/config/environment";
-import type { User } from "../../src/models/User";
-import { createTestUser } from "../../src/test-data/users";
+} from "../../../src/api/types/farm";
+import { ApiUrls } from "../../../src/api/urls";
+import { config } from "../../../src/config/environment";
+import type { User } from "../../../src/models/User";
+import { createTestUser } from "../../../src/test-data/users";
 
 export async function readApiResponse<TResponse>(
   response: APIResponse,

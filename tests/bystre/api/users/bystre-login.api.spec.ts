@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-import { config } from "../../../src/config/environment";
+import { config } from "../../../../src/config/environment";
 import { BystreUsersApiClient } from "../support/users/bystre-users-api.client";
 import {
   expectBystreLoginAuthState,

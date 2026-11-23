@@ -1,12 +1,12 @@
 import { expect, test } from "@playwright/test";
 
-import type { ApiSuccessResponse } from "../../src/api/types/common";
+import type { ApiSuccessResponse } from "../../../src/api/types/common";
 import type {
   ContactResponseBody,
   FeatureFlagsData,
   FeatureFlagsWithDescriptionsData,
-} from "../../src/api/types/flagged";
-import { ApiUrls } from "../../src/api/urls";
+} from "../../../src/api/types/flagged";
+import { ApiUrls } from "../../../src/api/urls";
 import { readApiResponse } from "./api-test-helpers";
 
 test(

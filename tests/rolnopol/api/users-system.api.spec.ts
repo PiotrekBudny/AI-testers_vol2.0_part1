@@ -3,13 +3,13 @@ import { expect, test } from "@playwright/test";
 import type {
   ApiErrorResponse,
   ApiSuccessResponse,
-} from "../../src/api/types/common";
+} from "../../../src/api/types/common";
 import type {
   PingResponse,
   SystemStatisticsData,
   UserProfileData,
-} from "../../src/api/types/system";
-import { ApiUrls } from "../../src/api/urls";
+} from "../../../src/api/types/system";
+import { ApiUrls } from "../../../src/api/urls";
 import { readApiResponse, registerFreshUser } from "./api-test-helpers";
 
 test(
