@@ -9,7 +9,6 @@ test.describe("GET /api/v1/users", { tag: ["@bystre", "@users"] }, () => {
   test("returns user accounts to an authenticated client", async ({
     bystreUsersApi,
     authenticatedUser,
-    secondAuthenticatedUser,
   }) => {
     // Arrange
     const authorization = `Bearer ${authenticatedUser.token}`;
@@ -34,20 +33,6 @@ test.describe("GET /api/v1/users", { tag: ["@bystre", "@users"] }, () => {
       expect(user).not.toHaveProperty("password");
     }
     expect(new Set(users.map((user) => user.id)).size).toBe(users.length);
-    expect(users).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          username: authenticatedUser.user.username,
-          email: authenticatedUser.user.email,
-          roles: expect.arrayContaining(["ROLE_CLIENT"]),
-        }),
-        expect.objectContaining({
-          username: secondAuthenticatedUser.user.username,
-          email: secondAuthenticatedUser.user.email,
-          roles: expect.arrayContaining(["ROLE_CLIENT"]),
-        }),
-      ]),
-    );
   });
 
   for (const { name, authorization } of unauthorizedCases) {

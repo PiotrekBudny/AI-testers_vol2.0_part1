@@ -1,3 +1,4 @@
+import { signInBystreUser } from "../support/users/bystre-user-lifecycle";
 import { expect, test } from "../support/users/bystre-users-api.fixtures";
 import { expectBystreLoginAuthState } from "../support/users/bystre-users-api.helpers";
 import type {
@@ -9,7 +10,7 @@ test.describe("Bystre API logout", () => {
   test(
     "revokes the user's refresh tokens",
     { tag: ["@bystre", "@auth", "@smoke"] },
-    async ({ bystreUsersApi, authenticatedUser }) => {
+    async ({ bystreUsersApi, authenticatedUser, userCleanup }) => {
       // Arrange
       const { user, token } = authenticatedUser;
       const signInResponse = await bystreUsersApi.login({
@@ -23,6 +24,8 @@ test.describe("Bystre API logout", () => {
       const logoutResponse = await bystreUsersApi.logout(`Bearer ${token}`);
       const refreshResponse = await bystreUsersApi.refresh(refreshToken);
       const refreshBody = (await refreshResponse.json()) as BystreErrorResponse;
+      const cleanupToken = await signInBystreUser(bystreUsersApi, user);
+      userCleanup(user, cleanupToken);
 
       // Assert
       expect(signInResponse.status()).toBe(200);

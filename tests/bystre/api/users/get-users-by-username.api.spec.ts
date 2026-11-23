@@ -58,11 +58,12 @@ test.describe(
       expect(response.status()).toBe(200);
       expect(body).toMatchObject({
         username: target.username,
-        email: target.email,
+        email: expect.stringMatching(/^[^@]*\*+@example\.com$/),
         firstName: target.firstName,
         lastName: target.lastName,
         roles: expect.arrayContaining(["ROLE_CLIENT"]),
       });
+      expect(body.email).not.toBe(target.email);
       expect(body).not.toHaveProperty("password");
     });
 

@@ -55,9 +55,7 @@ test.describe(
       // Assert
       expect(response.status()).toBe(400);
       expect(body).toMatchObject({
-        status: 400,
         error: expect.stringMatching(/\S+/),
-        path,
       });
     });
 

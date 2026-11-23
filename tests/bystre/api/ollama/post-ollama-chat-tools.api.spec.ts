@@ -83,9 +83,7 @@ test.describe(
         page: expect.any(Number),
         size: expect.any(Number),
       });
-      expect(doneIndexes).toHaveLength(2);
-      expect(doneIndexes[0]).toBeLessThan(toolIndex);
-      expect(doneIndexes[1]).toBe(chunks.length - 1);
+      expect(doneIndexes).toEqual([chunks.length - 1]);
       expect(assistantReply).toBe(expectedBeautyReply);
     });
 
@@ -135,7 +133,7 @@ test.describe(
           expect.any(String),
         );
       }
-      expect(chunks.filter((chunk) => chunk.done)).toHaveLength(3);
+      expect(chunks.filter((chunk) => chunk.done)).toHaveLength(1);
       expect(chunks.at(-1)?.done).toBe(true);
       expect(assistantText).not.toBe("");
     });

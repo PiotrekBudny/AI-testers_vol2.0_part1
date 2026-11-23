@@ -114,7 +114,7 @@ test.describe(
       expect(body).toHaveProperty("email", expect.stringMatching(/\S+/));
     });
 
-    test("reports a missing target account", async ({
+    test("prevents changing a missing target account", async ({
       bystreUsersApi,
       authenticatedUser,
     }) => {
@@ -131,7 +131,7 @@ test.describe(
       const body = await response.json();
 
       // Assert
-      expect(response.status()).toBe(404);
+      expect(response.status()).toBe(403);
       expect(body).toHaveProperty("message", expect.stringMatching(/\S+/));
     });
 

@@ -170,7 +170,7 @@ npx playwright test tests/bystre/api/users/post-users-refresh.api.spec.ts --proj
 npx playwright test tests/bystre/api/users/post-users-logout.api.spec.ts --project=bystre-api-tests --workers=1 --retries=0
 ```
 
-Both specs use the authenticated-user fixture, which creates and cleans up a unique test account. The logout test verifies refresh-token revocation; the fixture's access token remains available for account cleanup.
+Both specs use the authenticated-user fixture, which creates and cleans up a unique test account. The logout test verifies refresh-token revocation, then signs in again to supply a fresh access token for account cleanup.
 
 ## Local application profiles
 
