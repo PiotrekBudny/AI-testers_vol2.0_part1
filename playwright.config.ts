@@ -19,44 +19,42 @@ export default defineConfig({
     // Setup project for authentication
     {
       name: "setup",
-      testMatch:
-        /.*1_designing_framework_and_processes_with_AI\/auth\/setup\.spec\.ts/,
+      testMatch: /.*rolnopol\/ui\/auth\/setup\.spec\.ts/,
       use: { ...devices["Desktop Chrome"] },
     },
 
     // Smoke tests - fast checks without authentication
     {
       name: "smoke-tests",
-      testMatch:
-        /.*1_designing_framework_and_processes_with_AI\/main\.smoke\.spec\.ts/,
+      testMatch: /.*rolnopol\/ui\/main\.smoke\.spec\.ts/,
       use: { ...devices["Desktop Chrome"] },
     },
 
     // Playwright CLI tests - new test suite using Playwright CLI
     {
       name: "playwright-cli",
-      testMatch: /.*2_playwright_cli\/.*\.spec\.ts/,
+      testMatch: /.*rolnopol\/ui-cli\/.*\.spec\.ts/,
       use: { ...devices["Desktop Chrome"] },
     },
 
     // API tests - direct HTTP requests, no browser needed
     {
       name: "api-tests",
-      testMatch: /.*3_api_tests\/.*\.spec\.ts/,
+      testMatch: /.*rolnopol\/api\/.*\.spec\.ts/,
       use: { baseURL: config.BASE_URL },
     },
 
     // Bystre API tests use their own app-scoped base URL and credentials.
     {
       name: "bystre-api-tests",
-      testMatch: /.*4_byst\.re_api_tests\/.*\.api\.spec\.ts/,
+      testMatch: /.*bystre\/api\/.*\.api\.spec\.ts/,
       grepInvert: /@bystre-admin/,
       use: { baseURL: config.BYSTRE_API_BASE_URL },
     },
 
     {
       name: "bystre-admin-api-tests",
-      testMatch: /.*4_byst\.re_api_tests\/.*\.api\.spec\.ts/,
+      testMatch: /.*bystre\/api\/.*\.api\.spec\.ts/,
       grep: /@bystre-admin/,
       use: { baseURL: config.BYSTRE_ADMIN_API_BASE_URL },
     },
@@ -64,8 +62,7 @@ export default defineConfig({
     // Authenticated tests that mutate data - must finish before the demo user logs out
     {
       name: "authenticated-fields",
-      testMatch:
-        /.*1_designing_framework_and_processes_with_AI\/authenticated\/fields\.spec\.ts/,
+      testMatch: /.*rolnopol\/ui\/authenticated\/fields\.spec\.ts/,
       use: {
         ...devices["Desktop Chrome"],
         storageState: "playwright/.auth/user.json",
@@ -77,8 +74,7 @@ export default defineConfig({
     // Demo-user tests can run independently without being blocked by authenticated-fields failures
     {
       name: "authenticated-profile",
-      testMatch:
-        /.*1_designing_framework_and_processes_with_AI\/authenticated\/demo-user\.spec\.ts/,
+      testMatch: /.*rolnopol\/ui\/authenticated\/demo-user\.spec\.ts/,
       use: {
         ...devices["Desktop Chrome"],
         storageState: "playwright/.auth/user.json",

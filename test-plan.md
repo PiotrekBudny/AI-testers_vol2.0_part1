@@ -51,7 +51,7 @@ Checkboxes indicate implementation status: `[x]` implemented, `[ ]` not yet impl
 - [x] Login with valid credentials succeeds. `@auth @smoke`
 - [x] Login with invalid credentials fails. `@auth @smoke`
 - [x] Logout clears the session. `@auth @smoke`
-- [x] Requests without a valid token are rejected. `@auth` (API, tests/3_api_tests/users-system.api.spec.ts + fields-staff-animals.api.spec.ts + financial-marketplace.api.spec.ts)
+- [x] Requests without a valid token are rejected. `@auth` (API, tests/rolnopol/api/users-system.api.spec.ts + fields-staff-animals.api.spec.ts + financial-marketplace.api.spec.ts)
 
 ### Role-Based Access
 
